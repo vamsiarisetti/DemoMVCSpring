@@ -4,14 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Spring 4 MVC - HelloWorld Index Page</title>
+<title>Header</title>
+<style type="text/css">
+#divname {
+	text-align: right;
+	font-size: 20px;
+	background-color: darkslateblue;
+	padding-top: 59px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	color: #FFFFD1;
+}
+</style>
 </head>
 <body>
-	<center>
-		<h2>Hello World</h2>
-		<h3>
-			<a href="hello?name=Vamsi">Click Here</a>
-		</h3>
-	</center>
+	<div id="divHdr">
+		<div id="divname">Hi, ${name}</div>
+	</div>
 </body>
 </html>
