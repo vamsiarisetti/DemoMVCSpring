@@ -8,16 +8,25 @@
 	<name>DemoMVCSpring Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring.version>4.0.1.RELEASE</spring.version>
+		<spring.version>4.0.6.RELEASE</spring.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<!-- Spring dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -37,14 +46,56 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<!-- Hiberanate dependency -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.2.7.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
+
+		<!-- PostgreSQL Dependency -->
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901.jdbc4</version>
+		</dependency>
+
+		<!-- REST -->
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>2.22.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.3</version>
+		</dependency>
+
 		<!-- Log4j Dependencies -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+
 	</dependencies>
 	<build>
+		<!-- <pluginManagement> <plugins> <plugin> <artifactId>maven-resources-plugin</artifactId> 
+			<version>2.7</version> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+			<artifactId>maven-compiler-plugin</artifactId> <version>3.6</version> <configuration> 
+			<source>1.8</source> <target>1.8</target> </configuration> </plugin> <plugin> 
+			<groupId>org.apache.maven.plugins</groupId> <artifactId>maven-war-plugin</artifactId> 
+			<version>2.4</version> <configuration> <warSourceDirectory>src/main/webapp</warSourceDirectory> 
+			<warName>DemoMVCSpring</warName> <failOnMissingWebXml>false</failOnMissingWebXml> 
+			</configuration> </plugin> </plugins> </pluginManagement> -->
 		<finalName>DemoMVCSpring</finalName>
 	</build>
 </project>
